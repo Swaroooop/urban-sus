@@ -16,10 +16,8 @@ app.use(express.json());
 connectDB();
 
 // Routes
-const authRoutes = require('./routes/auth');
 const communityRoutes = require('./routes/community');
 
-app.use('/api/auth', authRoutes);
 app.use('/api/community', communityRoutes);
 
 app.use('/api/air-quality', require('./routes/airQuality'));
